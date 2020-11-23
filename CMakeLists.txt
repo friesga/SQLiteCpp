@@ -4,7 +4,10 @@
 #
 # Distributed under the MIT License (MIT) (See accompanying file LICENSE.txt
 # or copy at http://opensource.org/licenses/MIT)
-cmake_minimum_required(VERSION 3.1) # for "CMAKE_CXX_STANDARD" version
+#
+# Minimum required versions:
+# - 3.1  - for "CMAKE_CXX_STANDARD" version
+cmake_minimum_required(VERSION 3.1) 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake") # custom CMake modules like FindSQLiteCpp
 project(SQLiteCpp VERSION 3.1.1)
 
@@ -174,6 +177,10 @@ source_group(scripts FILES ${SQLITECPP_SCRIPT})
 
 # add sources of the wrapper as a "SQLiteCpp" static library
 add_library(SQLiteCpp ${SQLITECPP_SRC} ${SQLITECPP_INC} ${SQLITECPP_DOC} ${SQLITECPP_SCRIPT})
+
+if (MSVC)
+    target_compile_options(SQLiteCpp PRIVATE $<$<CXX_COMPILER_ID:MSVC>:/nologo>)
+endif ()
 
 # Options relative to SQLite and SQLiteC++ functions
 
