@@ -27,6 +27,11 @@
           "name": "CMAKE_VERBOSE_MAKEFILE",
           "value": "True",
           "type": "BOOL"
+        },
+        {
+          "name": "SQLITECPP_INTERNAL_SQLITE",
+          "value": "False",
+          "type": "BOOL"
         }
       ]
     }
