@@ -712,7 +712,7 @@ private:
      * This is a internal class, not part of the API (hence full documentation is in the cpp).
      */
     // TODO Convert this whole custom pointer to a C++11 std::shared_ptr with a custom deleter
-    class Ptr
+    class DLLEXPORT Ptr
     {
     public:
         // Prepare the statement and initialize its reference counter
