@@ -32,6 +32,26 @@
           "name": "SQLITECPP_INTERNAL_SQLITE",
           "value": "False",
           "type": "BOOL"
+        },
+        {
+          "name": "CMAKE_C_FLAGS_DEBUG",
+          "value": "/Zi /Ob0 /Od /RTC1",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_C_FLAGS_MINSIZEREL",
+          "value": "/O1 /Ob1 /DNDEBUG",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_C_FLAGS_RELEASE",
+          "value": "/O2 /Ob2 /DNDEBUG",
+          "type": "STRING"
+        },
+        {
+          "name": "CMAKE_C_FLAGS_RELWITHDEBINFO",
+          "value": "/Zi /O2 /Ob1 /DNDEBUG",
+          "type": "STRING"
         }
       ]
     }
