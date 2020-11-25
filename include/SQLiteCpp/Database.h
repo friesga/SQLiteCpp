@@ -25,7 +25,7 @@ struct Mem;
 typedef struct Mem sqlite3_value;
 #endif
 
-#ifdef SQLiteCpp_EXPORTS
+#if defined (SQLiteCpp_EXPORTS) || defined (SQLiteCpp_debug_EXPORTS)
     #define DLLEXPORT __declspec (dllexport)
 #else
     #define DLLEXPORT 

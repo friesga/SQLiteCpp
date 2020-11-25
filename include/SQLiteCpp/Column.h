@@ -16,7 +16,7 @@
 #include <string>
 #include <climits> // For INT_MAX
 
-#ifdef SQLiteCpp_EXPORTS
+#if defined (SQLiteCpp_EXPORTS) || defined (SQLiteCpp_debug_EXPORTS)
     #define DLLEXPORT __declspec (dllexport)
 #else
     #define DLLEXPORT 
