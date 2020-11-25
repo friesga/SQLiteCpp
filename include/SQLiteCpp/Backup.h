@@ -18,6 +18,12 @@
 // Forward declaration to avoid inclusion of <sqlite3.h> in a header
 struct sqlite3_backup;
 
+#ifdef SQLiteCpp_EXPORTS
+    #define DLLEXPORT __declspec (dllexport)
+#else
+    #define DLLEXPORT 
+#endif
+
 namespace SQLite
 {
 
@@ -30,7 +36,7 @@ namespace SQLite
  * See also the a reference implementation of live backup taken from the official site:
  * https://www.sqlite.org/backup.html
  */
-class Backup
+class DLLEXPORT Backup
 {
 public:
     /**

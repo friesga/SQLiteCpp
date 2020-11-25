@@ -21,6 +21,11 @@
 struct sqlite3;
 struct sqlite3_stmt;
 
+#ifdef SQLiteCpp_EXPORTS
+    #define DLLEXPORT __declspec (dllexport)
+#else
+    #define DLLEXPORT 
+#endif
 
 namespace SQLite
 {
@@ -49,7 +54,7 @@ extern const int OK; ///< SQLITE_OK
  *    because of the way it shares the underling SQLite precompiled statement
  *    in a custom shared pointer (See the inner class "Statement::Ptr").
  */
-class Statement
+class DLLEXPORT Statement
 {
     friend class Column; // For access to Statement::Ptr inner class
 

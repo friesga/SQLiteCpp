@@ -16,6 +16,12 @@
 // Forward declaration to avoid inclusion of <sqlite3.h> in a header
 struct sqlite3;
 
+#ifdef SQLiteCpp_EXPORTS
+    #define DLLEXPORT __declspec (dllexport)
+#else
+    #define DLLEXPORT 
+#endif
+
 namespace SQLite
 {
 
@@ -23,7 +29,7 @@ namespace SQLite
 /**
  * @brief Encapsulation of the error message from SQLite3, based on std::runtime_error.
  */
-class Exception : public std::runtime_error
+class DLLEXPORT Exception : public std::runtime_error
 {
 public:
     /**

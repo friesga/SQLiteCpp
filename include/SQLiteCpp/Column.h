@@ -16,6 +16,11 @@
 #include <string>
 #include <climits> // For INT_MAX
 
+#ifdef SQLiteCpp_EXPORTS
+    #define DLLEXPORT __declspec (dllexport)
+#else
+    #define DLLEXPORT 
+#endif
 
 namespace SQLite
 {
@@ -43,7 +48,7 @@ extern const int Null;      ///< SQLITE_NULL
  *    because of the way it shares the underling SQLite precompiled statement
  *    in a custom shared pointer (See the inner class "Statement::Ptr").
  */
-class Column
+class DLLEXPORT Column
 {
 public:
     /**

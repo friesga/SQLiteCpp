@@ -25,6 +25,11 @@ struct Mem;
 typedef struct Mem sqlite3_value;
 #endif
 
+#ifdef SQLiteCpp_EXPORTS
+    #define DLLEXPORT __declspec (dllexport)
+#else
+    #define DLLEXPORT 
+#endif
 
 namespace SQLite
 {
@@ -98,7 +103,7 @@ struct Header {
  *    because of the way it shares the underling SQLite precompiled statement
  *    in a custom shared pointer (See the inner class "Statement::Ptr").
  */
-class Database
+class DLLEXPORT Database
 {
     friend class Statement; // Give Statement constructor access to the mSQLitePtr Connection Handle
 
