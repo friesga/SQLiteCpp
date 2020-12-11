@@ -174,7 +174,7 @@ public:
     ~Database() = default;
 
     // Deleter functor to use with smart pointers to close the SQLite database connection in an RAII fashion.
-    struct Deleter
+    struct DLLEXPORT Deleter
     {
         void operator()(sqlite3* apSQLite);
     };
