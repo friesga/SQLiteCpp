@@ -10,7 +10,7 @@
  */
 #pragma once
 
-#include <SQLiteCpp/Column.h>
+#include <Column.h>
 #include <memory>
 #include <string.h>
 

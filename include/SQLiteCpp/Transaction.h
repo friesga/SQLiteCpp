@@ -10,7 +10,7 @@
  */
 #pragma once
 
-#include <SQLiteCpp/Exception.h>
+#include <Exception.h>
 
 #if defined (SQLiteCpp_EXPORTS) || defined (SQLiteCpp_debug_EXPORTS)
     #define DLLEXPORT __declspec (dllexport)

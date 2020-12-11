@@ -55,7 +55,7 @@ set (sqlitecpp_src
 # Set include directories
 # --------------------------------------------------
 set (sqlitecpp_inc
-    "${sqlitecpp_dir}/include"
+    "${sqlitecpp_dir}/include/SQLiteCpp"
     "${sqlitecpp_dir}/sqlite3")
 
 include_directories (${sqlitecpp_inc})
